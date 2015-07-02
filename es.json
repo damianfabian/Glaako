@@ -1,0 +1,20 @@
+{
+  "APP_LANGUAGE":"Ingles",
+  "NAV_HOME":"Inicio",
+  "NAV_WORDS":"Palabras",
+  "NAV_SEARCH":"Buscar",
+  "NAV_LOGIN":"Iniciar Sesion",
+  "NAV_LOGOUT":"Salir",
+  "NAV_SETUP":"Configurar",
+  "HOME_WELCOME":"Bienvenido a Idioms",
+  "HOME_TEXT":"Algun texto",
+  "WORD_HOLA":"Se utiliza para saludar a otra persona",
+  "WORD_HOLA_TIP_1":"Puedes usar esta palabra con una personas que acabas de conocer",
+  "WORD_HOLA_TIP_2":"Puedes usar esta palabra con una personas que acabas de conocer",
+  "RESULT_EMPTY_TITLE":"Lo sentimos :(",
+  "RESULT_EMPTY_MEANING":"No tenemos ninguna palabra que coincida con tu busqueda, trata con otra",
+  "LOGIN_PASSWORD":"Contraseña",
+  "LOGIN_EMAIL":"Correo",
+  "LOGIN_REMEMBERME":"Recordarme",
+  "LOGIN_SIGNIN":"Iniciar"
+}

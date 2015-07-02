@@ -1,0 +1,36 @@
+
+<div class='row'>
+  <div class='col-xs-6'>
+    <div class='well'>
+    <form class="form-signin">
+      <h2 class="form-signin-heading">{{ "NAV_LOGIN" | translate }}</h2>
+      <label for="inputEmail" class="sr-only">{{ "LOGIN_EMAIL" | translate }}</label>
+      <input type="email" ng-model="email" class="form-control" placeholder='{{ "LOGIN_EMAIL" | translate }}' required="" autofocus="">
+      <label for="inputPassword" class="sr-only">{{ "LOGIN_PASSWORD" | translate }}</label>
+      <input type="password" ng-model="password" class="form-control" placeholder='{{ "LOGIN_PASSWORD" | translate }}' required="">
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" value="remember-me"> {{ "LOGIN_REMEMBERME" | translate }}
+        </label>
+      </div>
+      <button class="btn btn-lg btn-primary btn-block" ng-click="login()">{{ "LOGIN_SIGNIN" | translate }}</button>
+      <p class='text-danger'>{{ message }}</p>
+    </form>    
+    </div>
+  </div>
+  
+  <div class="col-xs-6 text-left">
+    <div class='well'>
+    <p class="lead">Register now for <span class="text-success">FREE</span></p>
+    <ul class="list-unstyled" style="line-height: 2">
+    <li><span class="fa fa-check text-success"></span> See all your orders</li>
+    <li><span class="fa fa-check text-success"></span> Fast re-order</li>
+    <li><span class="fa fa-check text-success"></span> Save your favorites</li>
+    <li><span class="fa fa-check text-success"></span> Fast checkout</li>
+    <li><span class="fa fa-check text-success"></span> Get a gift <small>(only new customers)</small></li>
+    </ul>
+    <p><a ui-sref="register" class="btn btn-primary">Yes please, register now!</a></p>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,16 @@
+
+  [{
+    "lang":"es",
+    "word":"hola",
+    "image_url":"http://blog.educastur.es/incluyeticaula/files/2009/09/saludos.gif",
+    "meaning":"WORD_HOLA",
+    "tips":[{"image":"https://www.protocolo.org/extfiles/PROTOCOLO2491-889085.jpg","tip":"WORD_HOLA_TIP_1"},{"image":"","tip":"WORD_HOLA_TIP_2"}]
+  },
+  {
+    "lang":"en",
+    "word":"hello",
+    "image_url":"http://s3.amazonaws.com/rapgenius/1379358165_vRUPK0sUSx6zIb2hLNfB_saying_hello.jpg",
+    "meaning":"WORD_HOLA",
+    "tips":[{"image":"https://www.protocolo.org/extfiles/PROTOCOLO2491-889085.jpg","tip":"WORD_HOLA_TIP_1"},{"image":"","tip":"WORD_HOLA_TIP_2"}]
+  }]
+  

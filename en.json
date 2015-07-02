@@ -1,0 +1,20 @@
+{
+  "APP_LANGUAGE":"Spanish",
+  "NAV_HOME":"Home",
+  "NAV_WORDS":"Words",
+  "NAV_SEARCH":"Search",
+  "NAV_LOGIN":"Login",
+  "NAV_LOGOUT":"Logout",
+  "NAV_SETUP":"Setup",
+  "HOME_WELCOME":"Welcome to Idioms",
+  "HOME_TEXT":"Some text",
+  "WORD_HOLA":"It's used to say greetings to other person",
+  "WORD_HOLA_TIP_1":"You could use this word with a person that you just meet",
+  "WORD_HOLA_TIP_2":"You could use this word with a person that you just meet",
+  "RESULT_EMPTY_TITLE":"So Sorry :(",
+  "RESULT_EMPTY_MEANING":"We don't have any result that match with your search, change it and try again",
+  "LOGIN_PASSWORD":"Password",
+  "LOGIN_EMAIL":"Email",
+  "LOGIN_REMEMBERME":"Remember me",
+  "LOGIN_SIGNIN":"Sign In"
+}

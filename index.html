@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+
+<head>
+    <title>AngularJS: UI-Router Quick Start</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .clickable{
+        cursor:pointer;
+      }
+    </style>
+</head>
+
+<body ng-controller="MainCtrl">
+  <div class="container">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Glaako</a>
+      </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li ng-class="{'active': page == 'home'}"><a ui-sref="index" ng-click='active()'>{{ "NAV_HOME" | translate}} <span class="sr-only">(current)</span></a></li>
+            <li ng-class="{'active': page == 'words'}"><a ui-sref="catalog" ng-if='isLogin'>{{ "NAV_WORDS" | translate}}</a></li>
+          </ul>
+          <form class="navbar-form navbar-left" role="search" ng-if='isLogin'>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="{{ 'NAV_SEARCH' | translate }}" ng-model="filter" required>
+            </div>
+            <button type="submit" class="btn btn-default" ng-disabled='frmSearch.$invalid' ng-click="filter && search()">{{ "NAV_SEARCH" | translate }}</button>
+          </form>
+          <ul class="nav navbar-nav navbar-right" >
+            <li ng-if='!isLogin' ng-class="{'active': page == 'login'}"><a ui-sref="login">{{ "NAV_LOGIN" | translate}}</a></li>
+            <li ng-if='isLogin'><a class='clickable' ng-click='logout()'>{{ "NAV_LOGOUT" | translate}}</a></li>
+            <li class="dropdown" ng-if='isLogin'>
+              <a class="dropdown-toggle clickable" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ "NAV_SETUP" | translate }} <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a class='clickable' ng-click="setLang('en')"><span class="flag-icon flag-icon-us"></span> English</a></li>
+                <li><a class='clickable' ng-click="setLang('cn')"><span class="flag-icon flag-icon-cn"></span> 中文版</a></li>
+                <li><a class='clickable' ng-click="setLang('es')"><span class="flag-icon flag-icon-es"></span> Español</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a class='cliackable'>Separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div>
+    </nav>
+    <!-- Intro -->
+    <div class="jumbotron" ui-view="mainView">
+      
+    </div>
+    <!-- Content -->
+    <div class="row">
+      <div class="col-lg-8" ui-view="viewA">
+        
+      </div>
+      <div class="col-lg-4" ui-view="viewB">
+        
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© Company 2014</p>
+    </footer>
+            
+  </div>
+  <!-- Bootstrap CSS -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/flag-icon-css/0.7.1/css/flag-icon.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+  <!-- Angular -->
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular.min.js"></script>
+  <!-- UI-Router -->
+  <script src="//angular-ui.github.io/ui-router/release/angular-ui-router.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/bower-angular-translate/2.7.1/angular-translate.min.js"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular-translate-loader-static-files/2.7.2/angular-translate-loader-static-files.min.js"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular-local-storage/0.2.2/angular-local-storage.min.js"></script>
+  
+  
+  <!-- App Script -->
+  <script type="text/javascript" src="app.js"></script>
+  <script type="text/javascript" src="AuthService.js"></script>
+  <script type="text/javascript" src="LoginCtrl.js"></script>
+  <script type="text/javascript" src="Dictionary.js"></script>
+  <script type="text/javascript" src="DetailCtrl.js"></script>
+  <script type="text/javascript" src="TipCtrl.js"></script>
+  <script type="text/javascript" src="MainCtrl.js"></script>
+  <script type="text/javascript" src="ctrlList.js"></script>
+</body>
+
+</html>
